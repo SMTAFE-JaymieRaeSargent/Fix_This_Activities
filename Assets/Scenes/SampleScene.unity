@@ -489,6 +489,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5369809690378176387, guid: 7b8f08eee92e80a4b956439b3e03c2ac, type: 3}
+      propertyPath: m_AdditionalLightsShadowResolutionTier
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -841,6 +845,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5369809690378176387, guid: 7b8f08eee92e80a4b956439b3e03c2ac, type: 3}
+      propertyPath: m_AdditionalLightsShadowResolutionTier
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -864,6 +872,7 @@ GameObject:
   - component: {fileID: 1235937851}
   - component: {fileID: 1235937850}
   - component: {fileID: 1235937854}
+  - component: {fileID: 1235937855}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -979,6 +988,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25777ef87a436440b4fd247a0b24a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirstPersonController
+  _characterController: {fileID: 0}
+  _playerCamera: {fileID: 0}
+  _walkSpeed: 6
+  _sprintSpeed: 10
+  _crouchSpeed: 3
+  _movementSpeed: 0
+  _jumpSpeed: 8
+  _gravity: -20
+  _mouseSensitivity: 2
+  _lookLimit: 80
+  _invertY: 0
+--- !u!143 &1235937855
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235937849}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1719922190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1030,6 +1075,10 @@ PrefabInstance:
     - target: {fileID: 911436233397427647, guid: 7b8f08eee92e80a4b956439b3e03c2ac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5369809690378176387, guid: 7b8f08eee92e80a4b956439b3e03c2ac, type: 3}
+      propertyPath: m_AdditionalLightsShadowResolutionTier
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1092,6 +1141,10 @@ PrefabInstance:
     - target: {fileID: 911436233397427647, guid: 7b8f08eee92e80a4b956439b3e03c2ac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5369809690378176387, guid: 7b8f08eee92e80a4b956439b3e03c2ac, type: 3}
+      propertyPath: m_AdditionalLightsShadowResolutionTier
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
