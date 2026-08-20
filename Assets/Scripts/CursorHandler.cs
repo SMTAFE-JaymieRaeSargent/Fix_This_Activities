@@ -6,14 +6,6 @@ public class CursorHandler : MonoBehaviour
     void Start()
     {
         //LOCK cursor to center of screen
-        Cursor.lockState = CursorLockMode.Locked;
         //HIDE cursor
-        Cursor.visible = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
