@@ -1,14 +1,18 @@
-name: Unity CI 🚀
+name: Unity CI
 
 on:
   push:
     branches: [main]
   pull_request:
-    branches: ['*']
+    branches: ['**']
+
+permissions:
+  contents: read
+  checks: write
 
 jobs:
   test-and-build:
-    name: Test and Build Unity Project 🎮
+    name: Test and Build Unity Project
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -17,7 +21,7 @@ jobs:
           lfs: true
 
       - name: Restore Library Cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: Library
           key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
@@ -41,3 +45,9 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: StandaloneWindows64
+
+      - name: Upload Build
+        uses: actions/upload-artifact@v4
+        with:
+          name: Build-StandaloneWindows64
+          path: build
